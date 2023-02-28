@@ -60,20 +60,6 @@ fetch("https://api.ipify.org/?format=json")
        <code id="showIp"></code>
 
 
-<script>
-//fire google analytics event
-document.querySelectorAll('code:not(#showIp)').forEach((codeElement) => {
-  codeElement.addEventListener('click', () => {
-    console.log("clicked");
-    const codeText = codeElement.textContent.trim();
-    gtag('event', 'element-clicked', {
-      'event_category': 'code',
-      'event_label': codeText
-    });
-  });
-});
-
-</script>
 
       <div class="installation-instructions">
         <h3>Installation</h3>
@@ -96,5 +82,22 @@ document.querySelectorAll('code:not(#showIp)').forEach((codeElement) => {
         </p>
       </div>
     </div>
+
+  <script>
+//fire google analytics event
+document.querySelectorAll('code:not(#showIp)').forEach((codeElement) => {
+  codeElement.addEventListener('click', () => {
+    console.log("clicked");
+    const codeText = codeElement.textContent.trim();
+    gtag('event', 'element-clicked', {
+      'event_category': 'code',
+      'event_label': codeText
+    });
+  });
+});
+
+
+</script>
+
   </body>
 </html>
