@@ -87,7 +87,7 @@ fetch("https://api.ipify.org/?format=json")
 //fire google analytics event
 document.querySelectorAll('code:not(#showIp)').forEach((codeElement) => {
   codeElement.addEventListener('click', () => {
-    console.log("clicked");
+    //console.log("clicked");
     const codeText = codeElement.textContent.trim();
     gtag('event', 'element-clicked', {
       'event_category': 'code',
